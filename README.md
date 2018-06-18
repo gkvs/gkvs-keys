@@ -10,7 +10,7 @@ brew install certstrap
 
 Generate certs
 ```
-certstrap init --common-name "GkvsAuth"
+certstrap init --common-name "GkvsAuth" --expires 30 years
 ```
 
 Request cert for the node
