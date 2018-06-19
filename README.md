@@ -15,7 +15,7 @@ certstrap init --common-name "GkvsAuth" --expires "30 years"
 
 Request cert for the node
 ```
-certstrap request-cert --domain `hostname`
+certstrap request-cert --domain `hostname`,localhost
 ```
 
 Sign certificate request
@@ -28,3 +28,12 @@ Add to ENV:
 export GKVS_KEYS=[YOUR_CURRENT_DIRECTORY]/out
 ```
 
+Run GKVS server:
+```
+./gkvs_server
+```
+
+Show cert:
+```
+openssl s_client -showcerts -connect localhost:4040
+```
